@@ -1,4 +1,4 @@
-def merge_insertion_sort(l):
+def mergeInsertionSort(l):
     def binary_search_insertion(sorted_list, item):
         left = 0
         right = len(sorted_list) - 1
@@ -64,8 +64,8 @@ def merge_insertion_sort(l):
     return result
 
 A = [100, 2000, 999, 2, 5]
-print(merge_insertion_sort(A))
+print(mergeInsertionSort(A))
 B = [1, 11]
-print(merge_insertion_sort(C))
+print(mergeInsertionSort(C))
 C = ['A', 'Z', 'T', 'C']
-print(merge_insertion_sort(C))
+print(mergeInsertionSort(C))
