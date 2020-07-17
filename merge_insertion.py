@@ -28,10 +28,13 @@ def mergeInsertionSort(l):
             return result + left + right
 
         length = len(list_2d)
-        if lngth <= 1:
+        if length <= 1:
             return list_2d
         middle = length // 2
         return merge(sortlist_2d(list_2d[:middle]), sortlist_2d(list_2d[middle:]))
+
+    if len(l) <= 1:
+        return l
 
     two_paired_list = []
     is_surplus      = False
@@ -65,7 +68,7 @@ def mergeInsertionSort(l):
 
 A = [100, 2000, 999, 2, 5]
 print(mergeInsertionSort(A))
-B = [1, 11]
-print(mergeInsertionSort(C))
+B = []
+print(mergeInsertionSort(B))
 C = ['A', 'Z', 'T', 'C']
 print(mergeInsertionSort(C))
