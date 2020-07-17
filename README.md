@@ -1,6 +1,6 @@
 ## Merge Insertion (Ford-Johnson algorithm)
 
-I have never seen python's implementation of python, so created this.
+I have never seen python's implementation of this algorithm, so created this.
 
 ## Thanks
 
