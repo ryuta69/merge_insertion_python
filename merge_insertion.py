@@ -2,12 +2,18 @@ def merge_insertion_sort(l):
     def binary_search_insertion(sorted_list, item):
         left = 0
         right = len(sorted_list) - 1
-        while left < right:
+        while left <= right:
             middle = (left + right) // 2
-            if sorted_list[middle] < item:
+            if left == right:
+                if sorted_list[middle] < item:
+                    left = middle + 1
+                    break;
+                else:
+                    break;
+            elif sorted_list[middle] < item:
                 left = middle + 1
             else:
-                right = middle
+                right = middle - 1
         sorted_list.insert(left, item)
         return sorted_list
 
@@ -41,12 +47,19 @@ def merge_insertion_sort(l):
     result = [i[0] for i in sorted_list_2d]
     result.append(sorted_list_2d[-1][1])
 
-    for i in range(len(sorted_list_2d) - 1):
-        pivot = sorted_list_2d[i][1]
-        result = binary_search_insertion(result, pivot)
     if is_surplus:
         pivot = l[-1]
         result = binary_search_insertion(result, pivot)
+
+    is_surplus_inserted_before_this_index = False
+    for i in range(len(sorted_list_2d) - 1):
+        if result[i] == l[-i]:
+            is_surplus_inserted_before_this_index = True
+        pivot = sorted_list_2d[i][1]
+        if is_surplus_inserted_before_this_index:
+            result = result[:i+2] + binary_search_insertion(result[i+2:], pivot)
+        else:
+            result = result[:i+1] + binary_search_insertion(result[i+1:], pivot)
 
     return result
 
