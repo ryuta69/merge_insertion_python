@@ -2,6 +2,10 @@
 
 I have never seen python's implementation of this algorithm, so created this.
 
+Now this's implemented Algorithms/Python.
+
+https://github.com/TheAlgorithms/Python/pull/2211#event-3566922060
+
 ## Thanks
 
 The best repository to understand what's doing in this algorithm.
