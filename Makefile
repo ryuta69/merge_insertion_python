@@ -1,8 +1,8 @@
 build:
-	pyflow sync
+	poetry install
 
 format:
-	pyflow flake8 ./src --ignore=E203,W503 --show-source
+	poetry run flake8 ./src --ignore=E203,W503 --show-source
 
 lint:
-	pyflow black ./src
+	poetry run black ./src
