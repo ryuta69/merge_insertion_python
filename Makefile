@@ -1,8 +1,11 @@
 build:
 	poetry install
 
+typecheck:
+	poetry run pytype ./src
+
 format:
-	poetry run flake8 ./src --ignore=E203,W503 --show-source
+	poetry run black ./src
 
 lint:
-	poetry run black ./src
+	poetry run flake8 ./src --ignore=E501,E203,W503 --max-line-length=120 --show-source
