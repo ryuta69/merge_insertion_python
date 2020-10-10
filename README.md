@@ -1,10 +1,16 @@
-## Merge Insertion (Ford-Johnson algorithm)
+# Merge Insertion (Ford-Johnson algorithm)
 
-I have never seen python's implementation of this algorithm, so created this.
+The first implementation of Ford-Johnson algorithm in python.
 
 Now this's implemented Algorithms/Python.
 
-https://github.com/TheAlgorithms/Python/pull/2211#event-3566922060
+https://github.com/TheAlgorithms/Python/pull/2211
+
+## Usage
+
+```bash
+python3 -m doctest -v merge_insertion_sort.py
+```
 
 ## Thanks
 
