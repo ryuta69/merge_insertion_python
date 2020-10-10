@@ -2,7 +2,7 @@ build:
 	pyflow sync
 
 format:
-	pyflow flake8 . --ignore=E203,W503 --show-source
+	pyflow flake8 ./src --ignore=E203,W503 --show-source
 
 lint:
-	pyflow black .
+	pyflow black ./src
