@@ -2,7 +2,7 @@ build:
 	poetry install
 
 typecheck:
-	poetry run pytype ./src
+	poetry run mypy --strict-optional --disallow-untyped-defs --disallow-untyped-calls ./src
 
 format:
 	poetry run isort ./src && poetry run black ./src
