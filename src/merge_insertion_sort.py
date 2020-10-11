@@ -9,7 +9,6 @@ python3 merge_insertion_sort.py
 
 from typing import List
 
-
 def merge_insertion_sort(collection: List[int]) -> List[int]:
     """Pure implementation of merge-insertion sort algorithm in Python
     :param collection: some mutable ordered collection with heterogeneous
@@ -157,8 +156,10 @@ def merge_insertion_sort(collection: List[int]) -> List[int]:
 
     return result
 
-
-if __name__ == "__main__":
+def main():
     user_input = input("Enter numbers separated by a comma:\n").strip()
     unsorted = [int(item) for item in user_input.split(",")]
     print(merge_insertion_sort(unsorted))
+
+if __name__ == "__main__":
+    main()
