@@ -9,7 +9,19 @@ https://github.com/TheAlgorithms/Python/pull/2211
 ## Usage
 
 ```bash
+python3 ./src/merge_insertion_sort.py
+```
+
+Simple test
+
+```bash
 python3 -m doctest -v ./src/merge_insertion_sort.py
+```
+
+Run whole test
+
+```bash
+poetry run pytest
 ```
 
 ## Thanks

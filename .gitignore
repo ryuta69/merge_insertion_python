@@ -1,4 +1,3 @@
 __pycache__
-__pypackages__
-.pytype
+.pytest_cache
 monkeytype.sqlite3
