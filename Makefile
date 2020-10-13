@@ -2,7 +2,7 @@ build:
 	poetry install
 
 annotate:
-	poetry run monkeytype run __main__.py
+	poetry run monkeytype run entrypoint_monkeytype.py
 	poetry run monkeytype list-modules
 
 typecheck:
