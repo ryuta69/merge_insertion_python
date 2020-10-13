@@ -1,6 +1,9 @@
 build:
 	poetry install
 
+test:
+	poetry run pytest
+
 annotate:
 	poetry run pyannotate -w --py3 ./src
 	# poetry run monkeytype run entrypoint_monkeytype.py
@@ -16,5 +19,4 @@ format:
 lint:
 	poetry run flake8 ./src
 
-test:
-	poetry run pytest
+all: test annotate typecheck format lint
