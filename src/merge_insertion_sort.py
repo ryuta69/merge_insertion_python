@@ -9,6 +9,7 @@ python3 merge_insertion_sort.py
 
 from typing import List
 
+
 def merge_insertion_sort(collection: List[int]) -> List[int]:
     """Pure implementation of merge-insertion sort algorithm in Python
     :param collection: some mutable ordered collection with heterogeneous
@@ -23,8 +24,7 @@ def merge_insertion_sort(collection: List[int]) -> List[int]:
     [-45, -5, -2]
     """
 
-    def binary_search_insertion(sorted_list, item):
-        # type: (List[int], int) -> List[int]
+    def binary_search_insertion(sorted_list: List[int], item: int) -> List[int]:
         left = 0
         right = len(sorted_list) - 1
         while left <= right:
@@ -40,10 +40,8 @@ def merge_insertion_sort(collection: List[int]) -> List[int]:
         sorted_list.insert(left, item)
         return sorted_list
 
-    def sortlist_2d(list_2d):
-        # type: (List[List[int]]) -> List[List[int]]
-        def merge(left, right):
-            # type: (List[List[int]], List[List[int]]) -> List[List[int]]
+    def sortlist_2d(list_2d: List[List[int]]) -> List[List[int]]:
+        def merge(left: List[List[int]], right: List[List[int]]) -> List[List[int]]:
             result = []
             while left and right:
                 if left[0][0] < right[0][0]:
@@ -159,10 +157,12 @@ def merge_insertion_sort(collection: List[int]) -> List[int]:
 
     return result
 
+
 def main():
     user_input = input("Enter numbers separated by a comma:\n").strip()
     unsorted = [int(item) for item in user_input.split(",")]
     print(merge_insertion_sort(unsorted))
+
 
 if __name__ == "__main__":
     main()

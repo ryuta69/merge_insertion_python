@@ -2,8 +2,9 @@ build:
 	poetry install
 
 annotate:
-	poetry run monkeytype run entrypoint_monkeytype.py
-	poetry run monkeytype list-modules
+	poetry run pyannotate -w --py3 ./src
+	# poetry run monkeytype run entrypoint_monkeytype.py
+	# poetry run monkeytype list-modules
 
 typecheck:
 	poetry run mypy ./src
