@@ -24,6 +24,7 @@ def merge_insertion_sort(collection: List[int]) -> List[int]:
     """
 
     def binary_search_insertion(sorted_list, item):
+        # type: (List[int], int) -> List[int]
         left = 0
         right = len(sorted_list) - 1
         while left <= right:
@@ -40,7 +41,9 @@ def merge_insertion_sort(collection: List[int]) -> List[int]:
         return sorted_list
 
     def sortlist_2d(list_2d):
+        # type: (List[List[int]]) -> List[List[int]]
         def merge(left, right):
+            # type: (List[List[int]], List[List[int]]) -> List[List[int]]
             result = []
             while left and right:
                 if left[0][0] < right[0][0]:
