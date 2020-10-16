@@ -19,4 +19,10 @@ format:
 lint:
 	poetry run flake8 ./src
 
+doc:
+	# poetry run sphinx-quickstart docs
+	# # add 'sphinx.ext.autodoc', 'sphinx.ext.napoleon' in conf.py
+	poetry run sphinx-apidoc -f -o ./docs .
+	poetry run sphinx-build -b singlehtml ./docs ./docs/_build
+
 all: test annotate typecheck format lint
